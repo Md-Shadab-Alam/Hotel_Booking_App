@@ -36,14 +36,12 @@ export class ReservationService implements OnInit{
     let index = this.reservations.findIndex(res=> res.id ===id);
     this.reservations.splice(index,1);
     localStorage.setItem("reservation", JSON.stringify(this.reservations));
-    
   }
 
   updateReservation(id: string ,updatedReservation: Reservations):void{
     let index= this.reservations.findIndex(res => res.id=== id);
     this.reservations[index] = updatedReservation;
     localStorage.setItem("reservation", JSON.stringify(this.reservations));
-    
   }
 
 }

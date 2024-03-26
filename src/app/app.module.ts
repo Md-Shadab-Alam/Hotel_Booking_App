@@ -11,6 +11,8 @@ import { ReservationModule } from './reservation/reservation.module';
     AppComponent,
     
   ],
+  
+// here we are following "feature module architecture"
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,4 +22,5 @@ import { ReservationModule } from './reservation/reservation.module';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

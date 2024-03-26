@@ -18,7 +18,6 @@ export class ReservationFormComponent implements OnInit{
     private reservationService: ReservationService,
     private router :Router,
     private activatedRoute : ActivatedRoute){
-
   }
 
   // adding validators with the help of group method

@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 
+
+//here we are defining the routes for different components
 const routes: Routes = [
   {path:"", component: HomeComponent},
   {path:"list", component: ReservationListComponent},

@@ -2,7 +2,7 @@
 
 <hr>
 <h4 class="text-center">Reservation List</h4>
-<table class="table table-striped">
+<table class="table table-striped" >
     <thead>
         <tr>
             <th>Guest Name</th>
@@ -21,16 +21,20 @@
             <td>{{reservation.checkOutDate}}</td>
             <td>{{reservation.roomNumber}}</td>
             <td>
-                <button class="btn btn-small btn btn-outline-danger m-1" (click)="deleteReservation(reservation.id)">Delete</button>
-                <button class="btn btn-small btn btn-outline-info m-1" [routerLink]="['/edit', reservation.id]"> Edit </button>
+                <button class="btn btn-small btn btn-outline-danger m-1" 
+                        (click)="deleteReservation(reservation.id)">Delete</button>
+                <button class="btn btn-small btn btn-outline-info m-1" 
+                        [routerLink]="['/edit', reservation.id]"> Edit </button>
             </td>
-</tr>
+        </tr>
     </tbody>
-    <th></th>
 </table>
-<!--  -->
+<ul *ngIf="reservations.length; else noReservation">
+
+</ul>
 
 
+<!-- template for no data in the table -->
 <ng-template #noReservation>
-    <p>No reservation available</p>
+    <h3 class="text-center" style="color: red;">No reservation available</h3>
 </ng-template>
